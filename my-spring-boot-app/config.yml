@@ -1,0 +1,5 @@
+// filepath: /Users/ashu/spring-hello-world/my-spring-boot-app/config.yml
+my:
+  variable: "Hello, this is a print message from config.yml!"
+  testVariable1: "This is test variable 1"
+  testVariable2: "This is test variable 2"
