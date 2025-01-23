@@ -33,3 +33,16 @@ export MY_SECRET_MAP='{"secretVariable1":"Secret value 1","secretVariable2":"Sec
 ##How Secret Variables are Loaded
 
 The secret variables are loaded from the MY_SECRET_MAP environment variable, which contains a JSON string representing a map of secret properties. This JSON string is parsed and merged with the properties from config.yml in the ApplicationPropertyConfig class.
+
+
+##How to keep it in Manifest.yml file
+
+```yml
+applications:
+- name: my-spring-boot-app
+  memory: 512M
+  instances: 1
+  path: target/my-spring-boot-app.jar
+  env:
+    MY_SECRET_MAP: '{"secretVariable1":"Secret value 1","secretVariable2":"Secret value 2","secretVariable3":"Secret value 3"}'
+```
